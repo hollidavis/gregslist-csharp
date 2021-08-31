@@ -27,5 +27,15 @@ namespace gregslist_csharp.Controllers
                 return BadRequest(err.Message);
             }
         }
+
+         [HttpGet("{id}")]
+        public ActionResult<Car> Get(string id){
+        try{
+            Car found = _carsService.Get(id);
+            return Ok(found);
+        }catch (Exception err){
+            return BadRequest(err.Message);
+        }
+        }
     }
 }

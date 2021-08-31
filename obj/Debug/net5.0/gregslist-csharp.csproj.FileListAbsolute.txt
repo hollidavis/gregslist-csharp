@@ -27,3 +27,4 @@ C:\Users\wilki\source\codeworks\gregslist-csharp\obj\Debug\net5.0\gregslist-csha
 C:\Users\wilki\source\codeworks\gregslist-csharp\obj\Debug\net5.0\ref\gregslist-csharp.dll
 C:\Users\wilki\source\codeworks\gregslist-csharp\obj\Debug\net5.0\gregslist-csharp.pdb
 C:\Users\wilki\source\codeworks\gregslist-csharp\obj\Debug\net5.0\gregslist-csharp.genruntimeconfig.cache
+C:\Users\wilki\source\codeworks\gregslist-csharp\bin\Debug\net5.0\package-lock.json
