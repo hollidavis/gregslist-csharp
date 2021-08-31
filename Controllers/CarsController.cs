@@ -30,12 +30,32 @@ namespace gregslist_csharp.Controllers
 
          [HttpGet("{id}")]
         public ActionResult<Car> Get(string id){
-        try{
-            Car found = _carsService.Get(id);
-            return Ok(found);
-        }catch (Exception err){
-            return BadRequest(err.Message);
+            try{
+                Car found = _carsService.Get(id);
+                return Ok(found);
+            }catch (Exception err){
+                return BadRequest(err.Message);
+            }
         }
+
+        [HttpPost]
+        public ActionResult<Car> Create([FromBody] Car newCar){
+            try{
+                Car car = _carsService.Create(newCar);
+                return Ok(car);
+            } catch (Exception err) {
+                return BadRequest(err.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<String> Delete(string id){
+            try{
+                _carsService.Delete(id);
+                return Ok("Successfully Deleted");
+            }catch (Exception err){
+                return BadRequest(err.Message);
+            }
         }
     }
 }
